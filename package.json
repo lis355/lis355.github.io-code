@@ -12,7 +12,9 @@
 	"devDependencies": {
 		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
 		"eslint": "^8.54.0",
-		"eslint-config-react-app": "^7.0.1"
+		"eslint-config-react-app": "^7.0.1",
+		"lorem-ipsum": "^2.0.8",
+		"sass": "^1.77.6"
 	},
 	"scripts": {
 		"start": "react-scripts start",
