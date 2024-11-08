@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'Thin Pixel-7';
-	src: local('Thin Pixel-7'), url('./fonts/Thin Pixel-7/thin_pixel-7.ttf') format('truetype');
+	src: local('Thin Pixel-7'), url('../fonts/Thin Pixel-7/thin_pixel-7.ttf') format('truetype');
 }
 
 $color-panel-background: rgba(white, 0.9);
@@ -107,14 +107,6 @@ button {
 		}
 	}
 }
-
-// .header {
-// 	position: fixed;
-// 	top: 0;
-// 	z-index: 1;
-// 	width: 100%;
-// 	background-color: #f1f1f1;
-// }
 
 .progress-container {
 	width: 100%;

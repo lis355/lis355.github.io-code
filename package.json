@@ -3,23 +3,20 @@
 	"version": "1.0.0",
 	"private": true,
 	"repository": "https://github.com/lis355/lis355.github.io",
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build"
+	},
 	"dependencies": {
+		"lorem-ipsum": "^2.0.8",
 		"normalize.css": "^8.0.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"react-scripts": "5.0.1"
+		"react-scripts": "5.0.1",
+		"sass": "^1.80.6"
 	},
 	"devDependencies": {
-		"@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-		"eslint": "^8.54.0",
-		"eslint-config-react-app": "^7.0.1",
-		"lorem-ipsum": "^2.0.8",
-		"sass": "^1.77.6"
-	},
-	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"eject": "react-scripts eject"
+		"eslint-config-react-app": "^7.0.1"
 	},
 	"browserslist": {
 		"production": [
