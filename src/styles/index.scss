@@ -1,121 +1,17 @@
-@font-face {
-	font-family: 'Thin Pixel-7';
-	src: local('Thin Pixel-7'), url('../fonts/Thin Pixel-7/thin_pixel-7.ttf') format('truetype');
-}
-
-$color-panel-background: rgba(white, 0.9);
+@import "./vars.scss";
 
 * {
-	font-family: 'Thin Pixel-7';
 	padding: 0;
 	margin: 0;
 
 	user-select: none;
 }
 
+body {
+	font-family: monospace;
+	font-size: 16px;
+}
+
 p {
 	line-height: 1;
-}
-
-html {
-	font-size: 26px;
-}
-
-html,
-body {
-	height: 100%;
-}
-
-button {
-	background-color: transparent;
-	border: 1px black solid;
-	border-radius: 0;
-
-	padding: 3px;
-	padding-bottom: 4px;
-
-	line-height: 0.3;
-
-	&:hover {
-		background-color: rgba(lightgreen, 0.75);
-	}
-
-	&.header {
-		text-transform: uppercase;
-	}
-}
-
-#root {
-	height: 100%;
-
-	display: flex;
-	flex-direction: column;
-}
-
-.header {
-	position: sticky;
-	top: 0;
-
-	background-color: $color-panel-background;
-	border-bottom: 1px black solid;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	button {
-		border-bottom: none;
-		border-top: none;
-
-		padding: 0.3em;
-	}
-
-	button+button {
-		border-left: 0;
-	}
-}
-
-.content {
-	flex-grow: 1;
-}
-
-.footer {
-	position: sticky;
-	bottom: 0;
-
-	background-color: $color-panel-background;
-	border-top: 1px black solid;
-
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	font-size: 0.7em;
-
-	.icons {
-		display: flex;
-		padding-top: 0.1em;
-
-		.icon {
-			width: 1em;
-			height: 1em;
-			border: 1px black solid;
-		}
-
-		.icon+.icon {
-			margin-left: 0.1em;
-		}
-	}
-}
-
-.progress-container {
-	width: 100%;
-	height: 8px;
-	background: #ccc;
-}
-
-.progress-bar {
-	height: 8px;
-	background: #04AA6D;
-	width: 0%;
 }
