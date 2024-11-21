@@ -9,9 +9,21 @@
 
 body {
 	font-family: monospace;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 p {
-	line-height: 1;
+	line-height: 1.1;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-column {
+	flex-direction: column;
 }
