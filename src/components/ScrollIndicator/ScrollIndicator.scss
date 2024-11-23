@@ -1,11 +1,15 @@
+@import "../../styles/vars.scss";
+
+$scroll-indicator-height: 3px;
+
 .scroll-indicator {
 	width: 100%;
-	height: 5px;
-	background: #ccc;
+	height: $scroll-indicator-height;
+	background: transparent;
 
 	&-bar {
-		height: 5px;
-		background: #04AA6D;
+		height: $scroll-indicator-height;
+		background: $secondary-color;
 		width: 0%;
 	}
 }

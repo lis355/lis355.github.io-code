@@ -12,17 +12,18 @@ export default class ScrollIndicator extends React.Component {
 	}
 
 	componentDidMount() {
-		debugger;
-		this.props.containerElement.addEventListener("scroll", this.handleScroll);
+		document.addEventListener("scroll", this.handleScroll);
+		document.addEventListener("resize", this.handleScroll);
 
 		this.updateScroll();
 	}
 
 	componentWillUnmount() {
-		this.props.containerElement.removeEventListener("scroll", this.handleScroll);
+		document.removeEventListener("scroll", this.handleScroll);
+		document.removeEventListener("resize", this.handleScroll);
 	}
 
-	handleScroll() {
+	handleScroll(e) {
 		this.updateScroll();
 	}
 
@@ -31,11 +32,11 @@ export default class ScrollIndicator extends React.Component {
 	}
 
 	getCurrentScroll() {
-		const containerElement = this.props.containerElement;
-		if (!containerElement) return 0;
+		const element = document.querySelector("html");
+		if (!element) return 0;
 
-		const scroll = containerElement.scrollTop;
-		const height = containerElement.scrollHeight - containerElement.clientHeight;
+		const scroll = element.scrollTop;
+		const height = element.scrollHeight - element.clientHeight;
 
 		return scroll / height;
 	}
