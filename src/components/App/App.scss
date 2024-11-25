@@ -13,8 +13,15 @@ a:active {
 }
 
 .content {
-	max-width: $content-max-width;
 	margin: auto;
+
+	min-width: 576px;
+	width: 576px;
+
+	@media only screen and (max-width: 480px) {
+		min-width: 100vw;
+		width: 100vw;
+	}
 }
 
 .header {
@@ -32,6 +39,8 @@ a:active {
 	}
 
 	.header-item {
+		flex: 1;
+
 		padding: 0.7rem;
 		padding-top: 0.5rem;
 		padding-bottom: 0.5rem;
@@ -39,6 +48,8 @@ a:active {
 		border: 1px black solid;
 		border-top: none;
 		border-bottom: none;
+
+		text-align: center;
 
 		background-color: transparent;
 
@@ -57,8 +68,6 @@ a:active {
 .icon {
 	margin-right: 0.25rem;
 
-	fill: gray;
-
 	cursor: pointer;
 
 	svg {
@@ -72,7 +81,10 @@ a:active {
 }
 
 .main {
-	padding: 2.5rem;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 
 	.block-vertical~.block-vertical {
 		margin-top: 0.5rem;
@@ -82,7 +94,7 @@ a:active {
 		margin-right: 1rem;
 	}
 
-	$icon-size: 1.5rem;
+	$icon-size: 1.2rem;
 
 	.icon {
 		width: $icon-size;
@@ -103,7 +115,7 @@ a:active {
 	}
 
 	.download-resume-button {
-		font-size: 1.2rem;
+		font-size: 1rem;
 
 		margin-top: 0.15rem;
 
@@ -118,6 +130,19 @@ a:active {
 		&:hover {
 			background-color: rgba($color: orangered, $alpha: 0.75);
 			color: white;
+		}
+	}
+
+	table {
+		.v-a-top {
+			vertical-align: top;
+		}
+
+		.line-box {
+			height: 0.5rem;
+			margin-left: 0.25rem;
+			margin-right: 0.25rem;
+			border-bottom: 1px black solid;
 		}
 	}
 }
@@ -138,6 +163,8 @@ a:active {
 	}
 
 	.icons {
+		margin-left: 0.3rem;
+
 		display: flex;
 		padding-top: 0.3rem;
 		padding-bottom: 0.3rem;
@@ -152,6 +179,8 @@ a:active {
 
 	p {
 		font-size: 0.8rem;
+
+		user-select: none;
 	}
 }
 
