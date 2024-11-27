@@ -195,19 +195,68 @@ class CareerPage extends React.Component {
 								<th></th>
 							</tr>
 							<tr>
-								<td className="v-a-top">2024</td>
+								<td className="v-a-top"><p className="h">2024</p></td>
 								<td className="v-a-top"><div className="line-box" /></td>
-								<td>{lorem.generateParagraphs(1)}</td>
+								<td>
+									<p className="h">БК-Студия</p>
+									<p>Нижний Новгород https://bk-s.pro/</p>
+									<p>Программист Unity3D</p>
+									<p>Программирование обучающих приложений-тренажеров</p>
+								</td>
 							</tr>
 							<tr>
-								<td className="v-a-top">2023</td>
+								<td className="v-a-top"><p className="h">2024</p></td>
 								<td className="v-a-top"><div className="line-box" /></td>
-								<td>{lorem.generateParagraphs(1)}</td>
+								<td>
+									<p className="h">JDAM Corporation</p>
+									<p>Технический директор</p>
+									<p>NodeJS / React / Electron / Chrome CDP</p>
+									<p>Автоматизация в браузере действия пользователя, система для парсинга и взаимодействия с сайтами, логгирования, программирование обслуживающего сервера с микросервисной архитектурой.</p>
+									<p>Разработка антидетект-стратегий для работы браузера в автоматическом режиме.</p>
+									<p>Поддержка рабочего состояния системы: сервер, админ-панель, программа, обновления, CI/CD</p>
+								</td>
 							</tr>
 							<tr>
-								<td className="v-a-top">2022</td>
+								<td className="v-a-top"><p className="h">2019</p></td>
 								<td className="v-a-top"><div className="line-box" /></td>
-								<td>{lorem.generateParagraphs(1)}</td>
+								<td>
+									<p className="h">Webim</p>
+									<p>Санкт-Петербург</p>
+									<p>Web-разработчик Python Django / React</p>
+									<p>Проект по автоматизации сервиса аренды жилплощадей. Внутрибраузерная игра на базе VK API</p>
+								</td>
+							</tr>
+							<tr>
+								<td className="v-a-top"><p className="h">2016</p></td>
+								<td className="v-a-top"><div className="line-box" /></td>
+								<td>
+									<p className="h">Общество Сферического Кино</p>
+									<p>Нижний Новгород http://fulldomefilm.org</p>
+									<p>Программист Unity3D</p>
+									<p>Программирование клиента и сервера симулятора солнечной системы, впоследствии так же музыкального визуализатора на Unity3D. Сервер работает на Linux, клиент - на Apple Ipad.</p>
+									<iframe width="560" height="315" style={{ zoom: "0.7" }} src="https://www.youtube.com/embed/jo4kapFla1E?si=JCz98zuYmbFaSamK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+								</td>
+							</tr>
+							<tr>
+								<td className="v-a-top"><p className="h">2015</p></td>
+								<td className="v-a-top"><div className="line-box" /></td>
+								<td>
+									<p className="h">DivoGames (Games Insight)</p>
+									<p>Нижний Новгород http://www.divogames.com</p>
+									<p>Старший программист C++/C#</p>
+									<p>Программирование основных механик (логик) игры на стороне клиента. Программирование движка. Программирование сервера (игровые логики).
+										Разработка и сопровождения внутренних утилит для редактирования данных для игры.</p>
+								</td>
+							</tr>
+							<tr>
+								<td className="v-a-top"><p className="h">2012</p></td>
+								<td className="v-a-top"><div className="line-box" /></td>
+								<td>
+									<p className="h">Датавижн НН, ООО</p>
+									<p>Нижний Новгород http://www.opencascade.org</p>
+									<p>Программист C++</p>
+									<p>Работа с фреймверком Open CASCADE Technology, расширение функционала, работа с документацией фреймверка</p>
+								</td>
 							</tr>
 						</tbody>
 					</table>
