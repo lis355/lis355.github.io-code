@@ -52,6 +52,7 @@ a:active {
 		text-align: center;
 
 		background-color: transparent;
+		transition: background-color 0.15s;
 
 		cursor: pointer;
 
@@ -86,8 +87,12 @@ a:active {
 	padding-left: 0.5rem;
 	padding-right: 0.5rem;
 
-	.block-vertical~.block-vertical {
-		margin-top: 0.5rem;
+	.block-vertical {
+		margin-bottom: 0.5rem;
+	}
+
+	.big-block-vertical {
+		margin-bottom: 2.5rem;
 	}
 
 	.photo {
@@ -103,6 +108,10 @@ a:active {
 
 	.link {
 		margin-top: 0.15rem;
+
+		p {
+			margin: 0;
+		}
 
 		a:hover {
 			fill: #008000cc;
@@ -126,6 +135,9 @@ a:active {
 		cursor: pointer;
 		border: 1px orangered solid;
 		color: orangered;
+		transition: background-color 0.15s;
+
+		text-decoration: none;
 
 		&:hover {
 			background-color: rgba($color: orangered, $alpha: 0.75);
@@ -138,6 +150,10 @@ a:active {
 			vertical-align: top;
 		}
 
+		.h-a-end {
+			text-align: end;
+		}
+
 		.line-box {
 			height: 0.6rem;
 			margin-left: 0.25rem;
@@ -145,13 +161,24 @@ a:active {
 			border-bottom: 1px black solid;
 		}
 
+		td {
+			vertical-align: top;
+		}
+	}
 
-		p {
-			margin-bottom: 0.5rem;
+	p {
+		margin-bottom: 0.5rem;
 
-			&.h {
-				font-size: 1.2rem;
-			}
+		&.h {
+			font-size: 1.2rem;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			color: #008000cc;
 		}
 	}
 }

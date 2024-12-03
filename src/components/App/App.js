@@ -1,26 +1,21 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import React from "react";
+
 import { FaGithub } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa6";
-import { LoremIpsum } from "lorem-ipsum";
 import { MdAlternateEmail } from "react-icons/md";
-import React from "react";
 
 import ScrollIndicator from "../ScrollIndicator/ScrollIndicator.js";
 
 import "./App.scss";
 
 import MePhoto from "../../assets/images/me.png";
-
-const lorem = new LoremIpsum({
-	sentencesPerParagraph: {
-		max: 8,
-		min: 4
-	},
-	wordsPerSentence: {
-		max: 16,
-		min: 4
-	}
-});
+import SyntagePhoto from "../../assets/images/repos/syntage.png";
+import KslPhoto from "../../assets/images/repos/ksl.png";
+import Article1Photo from "../../assets/images/articles/art1.png";
+import Article2Photo from "../../assets/images/articles/art2.png";
+import Article3Photo from "../../assets/images/articles/art3.png";
+import Article4Photo from "../../assets/images/articles/art4.png";
 
 function formatAgeInRussian(age) {
 	const cases = {
@@ -116,47 +111,31 @@ class MePage extends React.Component {
 					</div>
 				</div>
 
-				<div className="block-vertical">
-					<p>Увлекся программированием я в возрасте 13-14 лет, когда мне стало интересно, как отрисовывается кадр игры Quake III.
-						Я не понимал, как так много разных вещей учитывается в отрисовке кадра, причем делалось это 60 раз в секунду.
-						После этого (в течении многих лет) я узнал про рендеринг, ray tracing, компонентный подход, оптимизации, алгоритм быстрого инверсного квадратного корня...
-						и с большим интересом погрузился в мир программирования
-					</p>
-				</div>
-				<div className="block-vertical">
-					<p>Первое знакомство - в школе, Turbo Pascal. В университете - C++ и самостоятельное изучение C#.
-						Тогда мне стали интересны дискретная математика, теория графов, регулярные выражения.
-						Как и любой программист, я стал мечтать написать свой компилятор, конечно, своего языка программирования.
-						Благодаря этому я много узнал про синтаксический LL и семантический анализ, деревья разбора, парсинг, написал программу для работы с булевой алгеброй, которая поддерживала произвольные математические выражения с функциями и переменными, строила схемы и таблицы истинности, раскладывала формулы в СКНФ и СДНФ.
-						Было очень интересно, это была конкурсная лаборатоная работа - я очень много программировал 2-3 месяца напролет, и занял первое место, получив возможность распределения на любую кафедру.
-						Тема моей дипломной работы - ""
-					</p>
-				</div>
-
-				<div className="block-vertical">
-					<p>На поздних курсах университета я много программировал на C# (много своих идей, игр), так же увлекся ассемблером и более "низким уровнем": читал книгу про дизассемблирование, внутреннее устройство таблицы виртуальных функций, работу компилятора, линтера, устройство ОС
-					</p>
-				</div>
-
-				<div className="block-vertical">
-					<p>Первая работа - разработка 2D игры для мобильных устройств на C++. Здесь я получил первый опыт работы в коллективе, ответственности, "долгих вечеров отладки" с исследованием памяти 0xCDCDCDCD.
-						Позже мне доверили программировать серверную часть на C#, я стал старшим программистом на проекте, и много общался с менеджерами и дизайнерами - учился понимать, как видит задачу "не-программист", договариваться, говорить о проблемах и предлагать решения.
-					</p>
-				</div>
-
-				<div className="block-vertical">
-					<p>Долгая работа - проект по автоматизации действий в браузере. Нужно было разрабатывать автоматизацию (эмулирование) действий пользователя, парсинг и взаимодействие с сайтом.
-						Мною были подробно изучены средства защит сайтов от ботов, веб-скрапинг, парсинга, мультиаккаунтинга - изучено много библиотек, занимающимися т.н. отпечатками - fingerprints браузера.
-						Взаимодействие с браузером впоследствии было переписано с использованием Chrome CDP (Chrome DevTools Protocol).
-						Этот проект - моё настоящие "детище", т.к. я разрабатывал всю "эко-систему": программу, сервер, микросервисы, админка, БД, вспомогательные инструменты.
-						и взаимодействие с API.
-					</p>
-				</div>
-
-				<div className="block-vertical">
-					<p>Среди моих увлечений - турпоходы и путешествия, игра на разных музыкальных инструментах, фотография</p>
-				</div>
-			</React.Fragment>
+				<p>Увлекся программированием я в возрасте 13-14 лет, когда мне стало интересно, как отрисовывается кадр игры Quake III.
+					Я не понимал, как так много разных вещей учитывается в отрисовке кадра, причем делалось это 60 раз в секунду.
+					После этого (в течении многих лет) я узнал про рендеринг, ray tracing, компонентный подход, оптимизации, алгоритм быстрого инверсного квадратного корня...
+					и с большим интересом погрузился в мир программирования
+				</p>
+				<p>Первое знакомство - в школе, Turbo Pascal. В университете - C++ и самостоятельное изучение C#.
+					Тогда мне стали интересны дискретная математика, теория графов, регулярные выражения.
+					Как и любой программист, я стал мечтать написать свой компилятор, конечно, своего языка программирования.
+					Благодаря этому я много узнал про синтаксический LL и семантический анализ, деревья разбора, парсинг, написал программу для работы с булевой алгеброй, которая поддерживала произвольные математические выражения с функциями и переменными, строила схемы и таблицы истинности, раскладывала формулы в СКНФ и СДНФ.
+					Было очень интересно, это была конкурсная лаборатоная работа - я очень много программировал 2-3 месяца напролет, и занял первое место, получив возможность распределения на любую кафедру.
+					Тема моей дипломной работы - ""
+				</p>
+				<p>На поздних курсах университета я много программировал на C# (много своих идей, игр), так же увлекся ассемблером и более "низким уровнем": читал книгу про дизассемблирование, внутреннее устройство таблицы виртуальных функций, работу компилятора, линтера, устройство ОС
+				</p>
+				<p>Первая работа - разработка 2D игры для мобильных устройств на C++. Здесь я получил первый опыт работы в коллективе, ответственности, "долгих вечеров отладки" с исследованием памяти 0xCDCDCDCD.
+					Позже мне доверили программировать серверную часть на C#, я стал старшим программистом на проекте, и много общался с менеджерами и дизайнерами - учился понимать, как видит задачу "не-программист", договариваться, говорить о проблемах и предлагать решения.
+				</p>
+				<p>Долгая работа - проект по автоматизации действий в браузере. Нужно было разрабатывать автоматизацию (эмулирование) действий пользователя, парсинг и взаимодействие с сайтом.
+					Мною были подробно изучены средства защит сайтов от ботов, веб-скрапинг, парсинга, мультиаккаунтинга - изучено много библиотек, занимающимися т.н. отпечатками - fingerprints браузера.
+					Взаимодействие с браузером впоследствии было переписано с использованием Chrome CDP (Chrome DevTools Protocol).
+					Этот проект - моё настоящие "детище", т.к. я разрабатывал всю "эко-систему": программу, сервер, микросервисы, админка, БД, вспомогательные инструменты.
+					и взаимодействие с API.
+				</p>
+				<p>Среди моих увлечений - турпоходы и путешествия, игра на разных музыкальных инструментах, фотография</p>
+			</React.Fragment >
 		);
 	}
 }
@@ -165,18 +144,14 @@ class KnowledgePage extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="block-vertical"><p style={{ fontSize: "1.2rem" }} >Стеки</p></div>
-				<div className="block-vertical"><p>C++ / STL</p></div>
-				<div className="block-vertical"><p>C# / Windows Forms / WinAPI</p></div>
-				<div className="block-vertical"><p>NodeJS / Express / MongoDB / React / MobX / Electron</p></div>
-				<div className="block-vertical"><p>Python / Django / SQL / React / Redux</p></div>
-				<div className="block-vertical"><p>Unity3D</p></div>
-
-				<div className="block-vertical"><p style={{ fontSize: "1.2rem" }}>Технологии</p></div>
-
-
-
-				<div className="block-vertical"><p style={{ fontSize: "1.2rem" }}>Знания</p></div>
+				<p style={{ fontSize: "1.2rem" }} >Стеки</p>
+				<p>C++ / STL</p>
+				<p>C# / Windows Forms / WinAPI</p>
+				<p>NodeJS / Express / MongoDB / React / MobX / Electron</p>
+				<p>Python / Django / SQL / React / Redux</p>
+				<p>Unity3D</p>
+				<p style={{ fontSize: "1.2rem" }}>Технологии</p>
+				<p style={{ fontSize: "1.2rem" }}>Знания</p>
 			</React.Fragment>
 		);
 	}
@@ -199,7 +174,7 @@ class CareerPage extends React.Component {
 								<td className="v-a-top"><div className="line-box" /></td>
 								<td>
 									<p className="h">БК-Студия</p>
-									<p>Нижний Новгород https://bk-s.pro/</p>
+									<p>Нижний Новгород <a href="https://bk-s.pro/" target="_blank" rel="noopener noreferrer">https://bk-s.pro/</a></p>
 									<p>Программист Unity3D</p>
 									<p>Программирование обучающих приложений-тренажеров</p>
 								</td>
@@ -210,8 +185,8 @@ class CareerPage extends React.Component {
 								<td>
 									<p className="h">JDAM Corporation</p>
 									<p>Технический директор</p>
-									<p>NodeJS / React / Electron / Chrome CDP</p>
-									<p>Автоматизация в браузере действия пользователя, система для парсинга и взаимодействия с сайтами, логгирования, программирование обслуживающего сервера с микросервисной архитектурой.</p>
+									<p>NodeJS + Express + MongoDB / React + MobX + Electron / Chrome CDP</p>
+									<p>Разработка и поддержка автоматизации действия пользователя в браузере, система для парсинга и взаимодействия с сайтами, логгирования, программирование обслуживающего сервера с микросервисной архитектурой.</p>
 									<p>Разработка антидетект-стратегий для работы браузера в автоматическом режиме.</p>
 									<p>Поддержка рабочего состояния системы: сервер, админ-панель, программа, обновления, CI/CD</p>
 								</td>
@@ -231,10 +206,12 @@ class CareerPage extends React.Component {
 								<td className="v-a-top"><div className="line-box" /></td>
 								<td>
 									<p className="h">Общество Сферического Кино</p>
-									<p>Нижний Новгород http://fulldomefilm.org</p>
+									<p>Нижний Новгород <a href="http://fulldomefilm.org" target="_blank" rel="noopener noreferrer">http://fulldomefilm.org</a></p>
 									<p>Программист Unity3D</p>
 									<p>Программирование клиента и сервера симулятора солнечной системы, впоследствии так же музыкального визуализатора на Unity3D. Сервер работает на Linux, клиент - на Apple Ipad.</p>
-									<iframe width="560" height="315" style={{ zoom: "0.7" }} src="https://www.youtube.com/embed/jo4kapFla1E?si=JCz98zuYmbFaSamK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+									<div className="">
+										<iframe width="560" height="315" style={{ zoom: "0.7" }} src="https://www.youtube.com/embed/jo4kapFla1E?si=JCz98zuYmbFaSamK" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+									</div>
 								</td>
 							</tr>
 							<tr>
@@ -242,7 +219,7 @@ class CareerPage extends React.Component {
 								<td className="v-a-top"><div className="line-box" /></td>
 								<td>
 									<p className="h">DivoGames (Games Insight)</p>
-									<p>Нижний Новгород http://www.divogames.com</p>
+									<p>Нижний Новгород <a href="http://www.divogames.com" target="_blank" rel="noopener noreferrer">http://www.divogames.com</a></p>
 									<p>Старший программист C++/C#</p>
 									<p>Программирование основных механик (логик) игры на стороне клиента. Программирование движка. Программирование сервера (игровые логики).
 										Разработка и сопровождения внутренних утилит для редактирования данных для игры.</p>
@@ -253,7 +230,7 @@ class CareerPage extends React.Component {
 								<td className="v-a-top"><div className="line-box" /></td>
 								<td>
 									<p className="h">Датавижн НН, ООО</p>
-									<p>Нижний Новгород http://www.opencascade.org</p>
+									<p>Нижний Новгород <a href="http://www.opencascade.org" target="_blank" rel="noopener noreferrer">http://www.opencascade.org</a></p>
 									<p>Программист C++</p>
 									<p>Работа с фреймверком Open CASCADE Technology, расширение функционала, работа с документацией фреймверка</p>
 								</td>
@@ -262,6 +239,529 @@ class CareerPage extends React.Component {
 					</table>
 				</div>
 			</React.Fragment >
+		);
+	}
+}
+
+class ArticlesPage extends React.Component {
+	render() {
+		return (
+			<React.Fragment>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/311220/" target="_blank" rel="noopener noreferrer">Программирование&Музыка: понимаем и пишем VSTi синтезатор на C# WPF. Часть 1</a></p>
+					<p>Программист Unity3D</p>
+					<p>Программирование обучающих приложений-тренажеров</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<iframe width="560" height="315" style={{ zoom: "0.7" }} src="https://www.youtube.com/embed/6zAVMEtIb2w?si=1_k0znso5zm3Ddi6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+						</div>
+					</p>
+				</div>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/311750/" target="_blank" rel="noopener noreferrer">Программирование&Музыка: ADSR-огибающая сигнала. Часть 2</a></p>
+					<p>Программист Unity3D</p>
+					<p>Программирование обучающих приложений-тренажеров</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article1Photo} alt="" width="400" height="100%" />
+						</div>
+					</p>
+				</div>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/313062/" target="_blank" rel="noopener noreferrer">Программирование&Музыка: Частотный фильтр Баттервота. Часть 3</a></p>
+					<p>Программист Unity3D</p>
+					<p>Программирование обучающих приложений-тренажеров</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article2Photo} alt="" width="400" height="100%" />
+						</div>
+					</p>
+				</div>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/313338/" target="_blank" rel="noopener noreferrer">Программирование&Музыка: Delay, Distortion и модуляция параметров. Часть 4</a></p>
+					<p>Программист Unity3D</p>
+					<p>Программирование обучающих приложений-тренажеров</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article3Photo} alt="" width="400" height="100%" />
+						</div>
+					</p>
+				</div>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/799821/" target="_blank" rel="noopener noreferrer">В помощь музыканту: меняем тональность (и не только) звука с компьютера в Windows</a></p>
+					<p>Программист Unity3D</p>
+					<p>Программирование обучающих приложений-тренажеров</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article4Photo} alt="" width="400" height="100%" />
+						</div>
+					</p>
+				</div>
+			</React.Fragment >
+		);
+	}
+}
+
+class GitHubForksAndStars extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			forks: 0,
+			stars: 0
+		};
+	}
+
+	componentDidMount() {
+		fetch(this.props.repositoryUrl)
+			.then(response => response.json())
+			.then(data => {
+				this.setState({
+					forks: data.forks,
+					stars: data.stargazers_count
+				});
+			});
+	}
+
+	render() {
+		return (
+			<p className="flex flex-row flex-align-center">
+				{this.state.forks > 0 && this.props.showForks &&
+					<React.Fragment>
+						<svg height="16" width="16" viewBox="0 0 16 16" style={{ marginRight: "0.2rem" }}>
+							<path d="M5 5.372v.878c0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75v-.878a2.25 2.25 0 1 1 1.5 0v.878a2.25 2.25 0 0 1-2.25 2.25h-1.5v2.128a2.251 2.251 0 1 1-1.5 0V8.5h-1.5A2.25 2.25 0 0 1 3.5 6.25v-.878a2.25 2.25 0 1 1 1.5 0ZM5 3.25a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Zm6.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm-3 8.75a.75.75 0 1 0-1.5 0 .75.75 0 0 0 1.5 0Z"></path>
+						</svg>
+						<div style={{ marginRight: "0.2rem" }}>{this.state.forks}</div>
+					</React.Fragment>
+				}
+				{this.state.stars > 0 && this.props.showStars &&
+					<React.Fragment>
+						<svg height="16" width="16" viewBox="0 0 16 16" style={{ marginLeft: "0.2rem", marginRight: "0.2rem" }}>
+							<path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+						</svg>
+						{this.state.stars}
+					</React.Fragment>
+				}
+			</p>
+		);
+	}
+}
+
+class GitHubPage extends React.Component {
+	render() {
+		return (
+			<React.Fragment>
+				<div className="block-vertical">
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://github.com/lis355/Syntage" target="_blank" rel="noopener noreferrer">Syntage</a></p>
+						<GitHubForksAndStars repositoryUrl="https://api.github.com/repos/lis355/Syntage" showForks={true} showStars={true} />
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/ksl" target="_blank" rel="noopener noreferrer">ksl</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={KslPhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/enumjs" target="_blank" rel="noopener noreferrer">enumjs</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/pass-telegram-bot" target="_blank" rel="noopener noreferrer">pass-telegram-bot</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/node-ytdl-audio-telegram-bot" target="_blank" rel="noopener noreferrer">node-ytdl-audio-telegram-bot</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/xmuselib" target="_blank" rel="noopener noreferrer">xmuselib</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/sider" target="_blank" rel="noopener noreferrer">sider</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/node-divert" target="_blank" rel="noopener noreferrer">node-divert</a></p>
+						<p>null</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/sharya" target="_blank" rel="noopener noreferrer">sharya</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/diarybot" target="_blank" rel="noopener noreferrer">diarybot</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/ydc" target="_blank" rel="noopener noreferrer">ydc</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/slight-pcmp-js" target="_blank" rel="noopener noreferrer">slight-pcmp-js</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/retand" target="_blank" rel="noopener noreferrer">retand</a></p>
+						<p>Kotlin</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/1moneyParser" target="_blank" rel="noopener noreferrer">1moneyParser</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/pomtpjs" target="_blank" rel="noopener noreferrer">pomtpjs</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/tgansweringmachine" target="_blank" rel="noopener noreferrer">tgansweringmachine</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/rps-game" target="_blank" rel="noopener noreferrer">rps-game</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/node-jobs-manager" target="_blank" rel="noopener noreferrer">node-jobs-manager</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/snake-game-js" target="_blank" rel="noopener noreferrer">snake-game-js</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/Futor" target="_blank" rel="noopener noreferrer">Futor</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/tracktags" target="_blank" rel="noopener noreferrer">tracktags</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/ndapp" target="_blank" rel="noopener noreferrer">ndapp</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/eslint-config-protop" target="_blank" rel="noopener noreferrer">eslint-config-protop</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/Knocle" target="_blank" rel="noopener noreferrer">Knocle</a></p>
+						<p>TypeScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/postmapse" target="_blank" rel="noopener noreferrer">postmapse</a></p>
+						<p>Python</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/angular-vk-photos" target="_blank" rel="noopener noreferrer">angular-vk-photos</a></p>
+						<p>TypeScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/celery_local" target="_blank" rel="noopener noreferrer">celery_local</a></p>
+						<p>Python</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/fastflex" target="_blank" rel="noopener noreferrer">fastflex</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/jsonf-python" target="_blank" rel="noopener noreferrer">jsonf-python</a></p>
+						<p>Python</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/human-parser-generator" target="_blank" rel="noopener noreferrer">human-parser-generator</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/chrome-tab-switcher" target="_blank" rel="noopener noreferrer">chrome-tab-switcher</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/celect" target="_blank" rel="noopener noreferrer">celect</a></p>
+						<p>JavaScript</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/af-io" target="_blank" rel="noopener noreferrer">af-io</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/Unity-Implet" target="_blank" rel="noopener noreferrer">Unity-Implet</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/GJson" target="_blank" rel="noopener noreferrer">GJson</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/PointsOnline" target="_blank" rel="noopener noreferrer">PointsOnline</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://api.github.com/repos/lis355/TableCloth" target="_blank" rel="noopener noreferrer">TableCloth</a></p>
+						<p>C#</p>
+						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+				</div>
+			</React.Fragment>
 		);
 	}
 }
@@ -351,6 +851,10 @@ class HobbiesPage extends React.Component {
 	}
 }
 
+function scrollToTop() {
+	window.scrollTo(0, 0);
+}
+
 class Header extends React.Component {
 	render() {
 		return (
@@ -358,13 +862,13 @@ class Header extends React.Component {
 				<div className="header-items">
 					<div className="content">
 						<div className="flex flex-row">
-							<Link to="/" className="header-item">о себе</Link>
-							<Link to="/knowledge" className="header-item">знания</Link>
-							<Link to="/career" className="header-item">карьера</Link>
-							<Link to="/articles" className="header-item">статьи</Link>
-							<Link to="/github" className="header-item">github</Link>
-							<Link to="/music" className="header-item">музыка</Link>
-							<Link to="/hobbies" className="header-item">хобби</Link>
+							<Link to="/me" className="header-item" onClick={scrollToTop}>о себе</Link>
+							<Link to="/knowledge" className="header-item" onClick={scrollToTop}>знания</Link>
+							<Link to="/career" className="header-item" onClick={scrollToTop}>карьера</Link>
+							<Link to="/articles" className="header-item" onClick={scrollToTop}>статьи</Link>
+							<Link to="/github" className="header-item" onClick={scrollToTop}>github</Link>
+							<Link to="/music" className="header-item" onClick={scrollToTop}>музыка</Link>
+							<Link to="/hobbies" className="header-item" onClick={scrollToTop}>хобби</Link>
 						</div>
 					</div>
 				</div>
@@ -417,7 +921,7 @@ class App extends React.Component {
 					<div className="main">
 						<div className="content">
 							<Routes>
-								<Route exact path="/" element={
+								<Route exact path="/me" element={
 									<MePage />
 								} />
 								<Route exact path="/knowledge" element={
@@ -426,8 +930,11 @@ class App extends React.Component {
 								<Route exact path="/career" element={
 									<CareerPage />
 								} />
+								<Route exact path="/articles" element={
+									<ArticlesPage />
+								} />
 								<Route exact path="/github" element={
-									null
+									<GitHubPage />
 								} />
 								<Route exact path="/music" element={
 									<MusicPage />
@@ -435,6 +942,7 @@ class App extends React.Component {
 								<Route exact path="/hobbies" element={
 									<HobbiesPage />
 								} />
+								<Route path="/" element={<Navigate replace to="/me" />} />
 							</Routes>
 						</div>
 					</div>
