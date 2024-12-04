@@ -2,6 +2,15 @@
 
 html {
 	overflow-y: scroll;
+	width: 100%;
+}
+
+$fontSize: 15px;
+
+body {
+	width: 100%;
+	font-family: monospace;
+	font-size: $fontSize;
 }
 
 a,
@@ -15,10 +24,13 @@ a:active {
 .content {
 	margin: auto;
 
-	min-width: 576px;
-	width: 576px;
+	$width: 576px - $fontSize;
+	min-width: $width;
+	width: $width;
 
-	@media only screen and (max-width: 480px) {
+	background-color: antiquewhite;
+
+	@media only screen and (max-width: 576px) {
 		min-width: 100vw;
 		width: 100vw;
 	}
@@ -82,10 +94,11 @@ a:active {
 }
 
 .main {
+	$side-padding: 4rem; // 0.5rem;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
-	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	padding-left: $side-padding;
+	padding-right: $side-padding;
 
 	.block-vertical {
 		margin-bottom: 0.5rem;
