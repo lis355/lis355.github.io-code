@@ -28,3 +28,45 @@ p {
 .flex-align-center {
 	align-items: center;
 }
+
+// Scroll
+
+// https://www.cssportal.com/css-scrollbar-generator/
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+// * {
+// 	scrollbar-width: thin;
+// 	scrollbar-color: #B8C0C2 #DFE9EB;
+// }
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+	height: 8px;
+	width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+	border-radius: 0px;
+	background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+	background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:active {
+	background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 0px;
+	background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb:active {
+	background-color: #B8C0C2;
+}
