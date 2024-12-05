@@ -1,16 +1,16 @@
 @import "../../styles/vars.scss";
 
-html {
-	overflow-y: scroll;
-	width: 100%;
+@font-face {
+	font-family: "Consolas Monospace";
+	src: url("../../assets/fonts/Consolas Regular.ttf") format("truetype");
 }
 
-$fontSize: 15px;
+html {
+	overflow-y: scroll;
+}
 
 body {
-	width: 100%;
-	font-family: monospace;
-	font-size: $fontSize;
+	font-family: "Consolas Monospace", monospace;
 }
 
 a,
@@ -23,18 +23,21 @@ a:active {
 
 .content {
 	margin: auto;
-
-	$width: 576px - $fontSize;
-	min-width: $width;
-	width: $width;
-
-	background-color: antiquewhite;
-
-	@media only screen and (max-width: 576px) {
-		min-width: 100vw;
-		width: 100vw;
-	}
 }
+
+body {
+	font-size: 15px;
+}
+
+$width: 561px;
+
+.content {
+	width: $width;
+	min-width: $width;
+	max-width: $width;
+}
+
+// @media only screen and (max-width:$width) {}
 
 .header {
 	position: fixed;
@@ -94,7 +97,7 @@ a:active {
 }
 
 .main {
-	$side-padding: 4rem; // 0.5rem;
+	$side-padding: 0.5rem;
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
 	padding-left: $side-padding;
