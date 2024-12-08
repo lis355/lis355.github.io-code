@@ -10,8 +10,11 @@ import ScrollIndicator from "../ScrollIndicator/ScrollIndicator.js";
 import "./App.scss";
 
 import MePhoto from "../../assets/images/me.png";
-import SyntagePhoto from "../../assets/images/repos/syntage.png";
-import KslPhoto from "../../assets/images/repos/ksl.png";
+import RepositorySyntagePhoto from "../../assets/images/repos/syntage.png";
+import RepositoryKslPhoto from "../../assets/images/repos/ksl.png";
+import RepositorySlightPcmpJsPhoto from "../../assets/images/repos/slight-pcmp-js.png";
+import RepositorySharyaPhoto from "../../assets/images/repos/sharya.png";
+
 import Article1Photo from "../../assets/images/articles/art1.png";
 import Article2Photo from "../../assets/images/articles/art2.png";
 import Article3Photo from "../../assets/images/articles/art3.png";
@@ -176,7 +179,9 @@ class KnowledgePage extends React.Component {
 				<p>Python / Django / SQL / React / Redux</p>
 				<p>Unity3D</p>
 				<p style={{ fontSize: "1.2rem" }}>Технологии</p>
-				<p style={{ fontSize: "1.2rem" }}>Знания</p>
+
+				<p style={{ fontSize: "1.2rem" }}>Область интересов</p>
+				<p>Unity3D</p>
 			</React.Fragment>
 		);
 	}
@@ -388,408 +393,158 @@ class GitHubPage extends React.Component {
 						<p className="h"><a href="https://github.com/lis355/Syntage" target="_blank" rel="noopener noreferrer">Syntage</a></p>
 						<GitHubForksAndStars repositoryUrl="https://api.github.com/repos/lis355/Syntage" showForks={true} showStars={true} />
 						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
+						<p>
+							Музыкальный синтезатор, сделанный как VST плагин для Windows на C# в учебных целях для статей на Хабре
+							Продставляет собой аддитивный синтез, осциллятор волны и дальнейшие блоки с эффектами и обработкой
+							Некоторые параметры модулируются во времени с помощью осциллятора низких частот
+						</p>
 						<p>
 							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+								<img className="photo" src={RepositorySyntagePhoto} alt="" width="400" height="100%" />
 							</div>
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/ksl" target="_blank" rel="noopener noreferrer">ksl</a></p>
+						<p className="h"><a href="https://github.com/lis355/ksl" target="_blank" rel="noopener noreferrer">ksl</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
+						<p>Помошник-лаунчер с поддержкой кастомных плагинов на JavaScript</p>
 						<p>
 							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={KslPhoto} alt="" width="400" height="100%" />
+								<img className="photo" src={RepositoryKslPhoto} alt="" width="400" height="100%" />
 							</div>
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/enumjs" target="_blank" rel="noopener noreferrer">enumjs</a></p>
+						<p className="h"><a href="https://github.com/lis355/sider" target="_blank" rel="noopener noreferrer">sider</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Библиотека-обертка для автоматизации браузера с использованием <a href="https://chromedevtools.github.io/devtools-protocol/" target="_blank" rel="noopener noreferrer">Chrome CDP (Chrome DevTools Protocol)</a></p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/pass-telegram-bot" target="_blank" rel="noopener noreferrer">pass-telegram-bot</a></p>
+						<p className="h"><a href="https://github.com/lis355/enumjs" target="_blank" rel="noopener noreferrer">enumjs</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
+						<p>Библиотека для работы с перечислениями в JavaScript</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://github.com/lis355/sharya" target="_blank" rel="noopener noreferrer">sharya</a></p>
+						<p>JavaScript, Go</p>
+						<p>Простой сервер c web-интерфейсом для обмена файлами</p>
 						<p>
 							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+								<img className="photo" src={RepositorySharyaPhoto} alt="" width="400" height="100%" />
 							</div>
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/node-ytdl-audio-telegram-bot" target="_blank" rel="noopener noreferrer">node-ytdl-audio-telegram-bot</a></p>
+						<p className="h"><a href="https://github.com/lis355/pass-telegram-bot" target="_blank" rel="noopener noreferrer">pass-telegram-bot</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Telegram-бот для быстрого поиска паролей, использующий базу данных програмы <a href="https://keepass.info/" target="_blank" rel="noopener noreferrer">KeePass</a></p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/xmuselib" target="_blank" rel="noopener noreferrer">xmuselib</a></p>
+						<p className="h"><a href="https://github.com/lis355/diarybot" target="_blank" rel="noopener noreferrer">diarybot</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
 						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
+							Telegram-бот для ведения дневника, с иерархией записей по датам, использующий облачное хранение на <a href="https://360.yandex.ru/disk/" target="_blank" rel="noopener noreferrer">Yandex Disk</a>
 						</p>
+						<p>Поддерживается конвертация речевых заметок в текст с помощью <a href="https://yandex.cloud/ru/services/speechkit?utm_referrer=https%3A%2F%2Fwww.google.com%2F" target="_blank" rel="noopener noreferrer">Yandex SpeechKit</a></p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/sider" target="_blank" rel="noopener noreferrer">sider</a></p>
+						<p className="h"><a href="https://github.com/lis355/ydc" target="_blank" rel="noopener noreferrer">ydc</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Библиотека для проектов на NodeJS для загрузки файлов конфигураций с облачного хранилища <a href="https://360.yandex.ru/disk/" target="_blank" rel="noopener noreferrer">Yandex Disk</a>						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/node-divert" target="_blank" rel="noopener noreferrer">node-divert</a></p>
-						<p>null</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/sharya" target="_blank" rel="noopener noreferrer">sharya</a></p>
+						<p className="h"><a href="https://github.com/lis355/slight-pcmp-js" target="_blank" rel="noopener noreferrer">slight-pcmp-js</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
+						<p>Музыкальный плеер с консольным интерфейсом</p>
 						<p>
 							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
+								<img className="photo" src={RepositorySlightPcmpJsPhoto} alt="" width="400" height="100%" />
 							</div>
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/diarybot" target="_blank" rel="noopener noreferrer">diarybot</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/ydc" target="_blank" rel="noopener noreferrer">ydc</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/slight-pcmp-js" target="_blank" rel="noopener noreferrer">slight-pcmp-js</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/retand" target="_blank" rel="noopener noreferrer">retand</a></p>
+						<p className="h"><a href="https://github.com/lis355/retand" target="_blank" rel="noopener noreferrer">retand</a></p>
 						<p>Kotlin</p>
-						<p>VST 2.4 .Net Study Synth</p>
 						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
+							Android-приложение для парсинга СМС-кодов и пересылки их в Telegram-бота
+						</p>
+						<p>
+							Может быть использовано в разных целях, основная - удобство, так же возможно использование для автоматизации действий браузера
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/1moneyParser" target="_blank" rel="noopener noreferrer">1moneyParser</a></p>
+						<p className="h"><a href="https://github.com/lis355/tracktags" target="_blank" rel="noopener noreferrer">tracktags</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Приложения для создания иерархии локальной медиатеки (работа с тегами у mp3 файлов)</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/pomtpjs" target="_blank" rel="noopener noreferrer">pomtpjs</a></p>
+						<p className="h"><a href="https://github.com/lis355/ndapp" target="_blank" rel="noopener noreferrer">ndapp</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
+						<p>Фреймворк для NodeJS, начальный каркас приложения с компонентным подходом, создает единую точку доступа к библиотекам, вспомогательным функциям,
+							перечислениям, константам, другим компонентам
+						</p>
 						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
+							Предоставляет функционал удобной работы с JSON-файлами, таймерами времени, логированием, обработкой ошибок
 						</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/tgansweringmachine" target="_blank" rel="noopener noreferrer">tgansweringmachine</a></p>
+						<p className="h"><a href="https://github.com/lis355/eslint-config-protop" target="_blank" rel="noopener noreferrer">eslint-config-protop</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Кастомный конфиг для линтера <a href="https://eslint.org/" target="_blank" rel="noopener noreferrer">Eslint</a></p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/rps-game" target="_blank" rel="noopener noreferrer">rps-game</a></p>
+						<p className="h"><a href="https://github.com/lis355/1moneyParser" target="_blank" rel="noopener noreferrer">1moneyParser</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Парсер базы данных приложения учета финансов <a href="https://play.google.com/store/apps/details?id=org.pixelrush.moneyiq&hl=ru" target="_blank" rel="noopener noreferrer">1Money</a></p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/node-jobs-manager" target="_blank" rel="noopener noreferrer">node-jobs-manager</a></p>
+						<p className="h"><a href="https://github.com/lis355/pomtpjs" target="_blank" rel="noopener noreferrer">pomtpjs</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Простой протокол поверх TCP для передачи JSON сообщений между приложениями</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/snake-game-js" target="_blank" rel="noopener noreferrer">snake-game-js</a></p>
+						<p className="h"><a href="https://github.com/lis355/node-jobs-manager" target="_blank" rel="noopener noreferrer">node-jobs-manager</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Менеджер задач для NodeJS</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/Futor" target="_blank" rel="noopener noreferrer">Futor</a></p>
-						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/tracktags" target="_blank" rel="noopener noreferrer">tracktags</a></p>
+						<p className="h"><a href="https://github.com/lis355/snake-game-js" target="_blank" rel="noopener noreferrer">snake-game-js</a></p>
 						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Игра змейка в браузере</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/ndapp" target="_blank" rel="noopener noreferrer">ndapp</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/eslint-config-protop" target="_blank" rel="noopener noreferrer">eslint-config-protop</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/Knocle" target="_blank" rel="noopener noreferrer">Knocle</a></p>
-						<p>TypeScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/postmapse" target="_blank" rel="noopener noreferrer">postmapse</a></p>
+						<p className="h"><a href="https://github.com/lis355/postmapse" target="_blank" rel="noopener noreferrer">postmapse</a></p>
 						<p>Python</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Вспомогательная библиотека для работы с VK API на Python</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/angular-vk-photos" target="_blank" rel="noopener noreferrer">angular-vk-photos</a></p>
-						<p>TypeScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/celery_local" target="_blank" rel="noopener noreferrer">celery_local</a></p>
-						<p>Python</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/fastflex" target="_blank" rel="noopener noreferrer">fastflex</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/jsonf-python" target="_blank" rel="noopener noreferrer">jsonf-python</a></p>
-						<p>Python</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/human-parser-generator" target="_blank" rel="noopener noreferrer">human-parser-generator</a></p>
+						<p className="h"><a href="https://github.com/lis355/GJson" target="_blank" rel="noopener noreferrer">GJson</a></p>
 						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Библиотека для работы с JSON в .NET</p>
 					</div>
 
 					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/chrome-tab-switcher" target="_blank" rel="noopener noreferrer">chrome-tab-switcher</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/celect" target="_blank" rel="noopener noreferrer">celect</a></p>
-						<p>JavaScript</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/af-io" target="_blank" rel="noopener noreferrer">af-io</a></p>
+						<p className="h"><a href="https://github.com/lis355/TableCloth" target="_blank" rel="noopener noreferrer">TableCloth</a></p>
 						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/Unity-Implet" target="_blank" rel="noopener noreferrer">Unity-Implet</a></p>
-						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/GJson" target="_blank" rel="noopener noreferrer">GJson</a></p>
-						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/PointsOnline" target="_blank" rel="noopener noreferrer">PointsOnline</a></p>
-						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
-					</div>
-
-					<div className="big-block-vertical">
-						<p className="h"><a href="https://api.github.com/repos/lis355/TableCloth" target="_blank" rel="noopener noreferrer">TableCloth</a></p>
-						<p>C#</p>
-						<p>VST 2.4 .Net Study Synth</p>
-						<p>
-							<div className="flex flex-row flex-justify-center">
-								<img className="photo" src={SyntagePhoto} alt="" width="400" height="100%" />
-							</div>
-						</p>
+						<p>Калькулятор булевой алгебры (конкурсный проект 2го курса университета)</p>
 					</div>
 
 				</div>
