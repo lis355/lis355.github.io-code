@@ -108,9 +108,9 @@ class MePage extends React.Component {
 								</div>
 							</a>
 						</div>
-						<div className="flex">
+						{/* <div className="flex">
 							<a className="download-resume-button" href="./resume.pdf" rel="noopener noreferrer">Скачать резюме (PDF)</a>
-						</div>
+						</div> */}
 					</div>
 				</div>
 				<p>
@@ -168,6 +168,7 @@ class MePage extends React.Component {
 	}
 }
 
+// eslint-disable-next-line no-unused-vars
 class KnowledgePage extends React.Component {
 	render() {
 		return (
@@ -668,7 +669,7 @@ class Header extends React.Component {
 					<div className="content">
 						<div className="flex flex-row">
 							<Link to="/me" className="header-item" onClick={scrollToTop}>о себе</Link>
-							<Link to="/knowledge" className="header-item" onClick={scrollToTop}>знания</Link>
+							{/* <Link to="/knowledge" className="header-item" onClick={scrollToTop}>знания</Link> */}
 							<Link to="/career" className="header-item" onClick={scrollToTop}>карьера</Link>
 							<Link to="/articles" className="header-item" onClick={scrollToTop}>статьи</Link>
 							<Link to="/github" className="header-item" onClick={scrollToTop}>github</Link>
@@ -692,9 +693,9 @@ class Main extends React.Component {
 						<Route exact path="/me" element={
 							<MePage />
 						} />
-						<Route exact path="/knowledge" element={
+						{/* <Route exact path="/knowledge" element={
 							<KnowledgePage />
-						} />
+						} /> */}
 						<Route exact path="/career" element={
 							<CareerPage />
 						} />
