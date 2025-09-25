@@ -9,7 +9,7 @@ import ScrollIndicator from "../ScrollIndicator/ScrollIndicator.js";
 
 import "./App.scss";
 
-import MePhoto from "../../assets/images/me.png";
+import MePhoto from "../../assets/images/me2.png";
 import RepositorySyntagePhoto from "../../assets/images/repos/syntage.png";
 import RepositoryKslPhoto from "../../assets/images/repos/ksl.png";
 import RepositorySlightPcmpJsPhoto from "../../assets/images/repos/slight-pcmp-js.png";
@@ -37,12 +37,13 @@ function formatAgeInRussian(age) {
 	const lastDigit = age % 10;
 	const lastTwoDigits = age % 100;
 
-	if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
-		return `${age} лет`;
-	}
+	if (lastTwoDigits >= 11 &&
+		lastTwoDigits <= 14) return `${age} лет`;
 
 	return `${age} ${cases[lastDigit]}`;
 }
+
+const TELEGRAM_NAME = "ivanlartsov";
 
 class MePage extends React.Component {
 	render() {
@@ -73,13 +74,13 @@ class MePage extends React.Component {
 							</a>
 						</div>
 						<div className="link">
-							<a href="https://t.me/lis355" target="_blank" rel="noopener noreferrer">
+							<a href={`https://t.me/${TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
 								<div style={{ display: "inline-block" }}>
 									<div className="flex flex-row flex-align-center">
 										<div className="icon">
 											<FaTelegram />
 										</div>
-										<p>@lis355</p>
+										<p>@{TELEGRAM_NAME}</p>
 									</div>
 								</div>
 							</a>
@@ -168,7 +169,6 @@ class MePage extends React.Component {
 	}
 }
 
-// eslint-disable-next-line no-unused-vars
 class KnowledgePage extends React.Component {
 	render() {
 		return (
@@ -179,10 +179,20 @@ class KnowledgePage extends React.Component {
 				<p>NodeJS / Express / MongoDB / React / MobX / Electron</p>
 				<p>Python / Django / SQL / React / Redux</p>
 				<p>Unity3D</p>
-				<p style={{ fontSize: "1.2rem" }}>Технологии</p>
+
+				<p style={{ fontSize: "1.2rem" }}>Книги</p>
+				<p>Роберт Мартин - Чистый код</p>
+				<p>Эндрю Таненбаум - Компьютерные сети, Архитектура компьютера, Современные операционные системы</p>
+				<p>Эриксон Джон - Хакинг. Искусство Эксплойта</p>
+				<p>Крис Касперски - Искусство дизассемблирования</p>
 
 				<p style={{ fontSize: "1.2rem" }}>Область интересов</p>
-				<p>Unity3D</p>
+				<p>Грамматики, разработка и программирование синтаксических анализаторов и парсеров, компиляторов</p>
+				<p>Реверс инжиниринг, дезассемблирование, деобфускация кода, изучение защищенного кода</p>
+				<p>Спецификации протоколов сетевого и прикладных уровней, TCP/IP, WebTorrent, WireGuard</p>
+				<p>Изучение сетевого граффика, DPI</p>
+				<p>Эмулирование синтеза звука, его программная обработка</p>
+				<p>Средства автоматизации для удобства жизни: написал множество ботов и утилит для записей дневника, хранения паролей, скачивания медиа ресурсов</p>
 			</React.Fragment>
 		);
 	}
@@ -669,7 +679,7 @@ class Header extends React.Component {
 					<div className="content">
 						<div className="flex flex-row">
 							<Link to="/me" className="header-item" onClick={scrollToTop}>о себе</Link>
-							{/* <Link to="/knowledge" className="header-item" onClick={scrollToTop}>знания</Link> */}
+							<Link to="/knowledge" className="header-item" onClick={scrollToTop}>знания</Link>
 							<Link to="/career" className="header-item" onClick={scrollToTop}>карьера</Link>
 							<Link to="/articles" className="header-item" onClick={scrollToTop}>статьи</Link>
 							<Link to="/github" className="header-item" onClick={scrollToTop}>github</Link>
@@ -693,9 +703,9 @@ class Main extends React.Component {
 						<Route exact path="/me" element={
 							<MePage />
 						} />
-						{/* <Route exact path="/knowledge" element={
+						<Route exact path="/knowledge" element={
 							<KnowledgePage />
-						} /> */}
+						} />
 						<Route exact path="/career" element={
 							<CareerPage />
 						} />
@@ -731,7 +741,7 @@ class Footer extends React.Component {
 							<MdAlternateEmail />
 						</div>
 						<div className="icon">
-							<a href="https://t.me/lis355" target="_blank" rel="noopener noreferrer">
+							<a href={`https://t.me/${TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
 								<FaTelegram />
 							</a>
 						</div>
