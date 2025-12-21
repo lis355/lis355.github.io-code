@@ -5,7 +5,7 @@
 	"repository": "https://github.com/lis355/lis355.github.io",
 	"scripts": {
 		"start": "NODE_OPTIONS=--no-experimental-webstorage react-scripts start",
-		"build": "react-scripts build"
+		"build": "NODE_OPTIONS=--no-experimental-webstorage react-scripts build"
 	},
 	"dependencies": {
 		"normalize.css": "^8.0.1",
