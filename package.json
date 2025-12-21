@@ -4,7 +4,7 @@
 	"private": true,
 	"repository": "https://github.com/lis355/lis355.github.io",
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "NODE_OPTIONS=--no-experimental-webstorage react-scripts start",
 		"build": "react-scripts build"
 	},
 	"dependencies": {

@@ -10,10 +10,11 @@ import ScrollIndicator from "../ScrollIndicator/ScrollIndicator.js";
 import "./App.scss";
 
 import MePhoto from "../../assets/images/me2.png";
-import RepositorySyntagePhoto from "../../assets/images/repos/syntage.png";
 import RepositoryKslPhoto from "../../assets/images/repos/ksl.png";
-import RepositorySlightPcmpJsPhoto from "../../assets/images/repos/slight-pcmp-js.png";
+import RepositoryNTunPhoto from "../../assets/images/repos/ntun.png";
 import RepositorySharyaPhoto from "../../assets/images/repos/sharya.png";
+import RepositorySlightPcmpJsPhoto from "../../assets/images/repos/slight-pcmp-js.png";
+import RepositorySyntagePhoto from "../../assets/images/repos/syntage.png";
 
 import Article1Photo from "../../assets/images/articles/art1.png";
 import Article2Photo from "../../assets/images/articles/art2.png";
@@ -162,6 +163,13 @@ class MePage extends React.Component {
 					взаимодействие с API.
 				</p>
 				<p>
+					В некоторый момент жизни я понял, что неотъемлемой частью моей жизни - это отдавать другим людям. Учить.
+					А чему я могу учить лучше и эффективнее всего? Конечно, чего я умею и сам, к тому же, с академическими знеаниями.
+					В весеннем семестре 2025го года я стал преподавать первокурсникам практику программирования на С++. Это стало для меня очень интересным путешествием.
+					Я преподавание с другой стороны, учился относиться к студентам, помогать им, заинтересовывать. Мои студенты очень многому меня научили.
+					Я пробую себя в разных форматах преподавания, думаю, как тесно интегрировать преподавание в свою жизнь.
+				</p>
+				<p>
 					Среди моих увлечений - турпоходы и путешествия, игра на разных музыкальных инструментах а так же фотография.
 				</p>
 			</React.Fragment >
@@ -209,6 +217,15 @@ class CareerPage extends React.Component {
 								<th style={{ width: "0%" }}></th>
 								<th style={{ width: "5rem" }}></th>
 								<th></th>
+							</tr>
+							<tr>
+								<td className="v-a-top"><p className="h">2025</p></td>
+								<td className="v-a-top"><div className="line-box" /></td>
+								<td>
+									<p className="h">ННГУ им. Лобачевского</p>
+									<p><a href="https://itmm.unn.ru/" target="_blank" rel="noopener noreferrer">Институт информационных технологий, математики и механики</a></p>
+									<p>Преподаватель практических занятий по C++</p>
+								</td>
 							</tr>
 							<tr>
 								<td className="v-a-top"><p className="h">2024</p></td>
@@ -412,6 +429,17 @@ class GitHubPage extends React.Component {
 						<p>
 							<div className="flex flex-row flex-justify-center">
 								<img className="photo" src={RepositorySyntagePhoto} alt="" width="400" height="100%" />
+							</div>
+						</p>
+					</div>
+
+					<div className="big-block-vertical">
+						<p className="h"><a href="https://github.com/lis355/ntun" target="_blank" rel="noopener noreferrer">ntun</a></p>
+						<p>JavaScript</p>
+						<p>Фреймверк для создания туннелей с разными протоколами транспорта (на данный момент TCP, WS, WebRTC) и входящими/исходящими подключениями</p>
+						<p>
+							<div className="flex flex-row flex-justify-center">
+								<img className="photo" src={RepositoryNTunPhoto} alt="" width="400" height="100%" />
 							</div>
 						</p>
 					</div>
