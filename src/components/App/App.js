@@ -20,6 +20,8 @@ import Article1Photo from "../../assets/images/articles/art1.png";
 import Article2Photo from "../../assets/images/articles/art2.png";
 import Article3Photo from "../../assets/images/articles/art3.png";
 import Article4Photo from "../../assets/images/articles/art4.png";
+import Article5Photo from "../../assets/images/articles/art5.png";
+import Article6Photo from "../../assets/images/articles/art6.png";
 
 function formatAgeInRussian(age) {
 	const cases = {
@@ -44,7 +46,14 @@ function formatAgeInRussian(age) {
 	return `${age} ${cases[lastDigit]}`;
 }
 
-const TELEGRAM_NAME = "ivanlartsov";
+function getDifferenceInYears(dateA, dateB) {
+	return Math.floor((dateA.valueOf() - dateB.valueOf()) / 1000 / 60 / 60 / 24 / 365);
+}
+
+const BIRTH_DATE = new Date(Date.parse("1993-03-10"));
+const LINK_MAIL = "lartsov@gmail.com";
+const LINK_TELEGRAM_NAME = "ivanlartsov";
+const LINK_HH_RESUME = "https://spb.hh.ru/resume/ab956444ff01ae077c0039ed1f6d3531415864";
 
 class MePage extends React.Component {
 	render() {
@@ -56,32 +65,32 @@ class MePage extends React.Component {
 						<div className="flex flex-row flex-align-center" style={{ marginTop: "-7px" }}>
 							<p style={{ fontSize: "2rem" }}>Иван Ларцов</p>
 							&nbsp;
-							<p style={{ fontSize: "1.2rem", color: "lightgray" }}> [{formatAgeInRussian(new Date().getFullYear() - 1993)}]</p>
+							<p style={{ fontSize: "1.2rem", color: "lightgray" }}> [{formatAgeInRussian(getDifferenceInYears(new Date(), BIRTH_DATE))}]</p>
 						</div>
 						<p style={{ fontSize: "1.2rem" }}>Нижний Новгород</p>
 						<p style={{ fontSize: "1.2rem" }}>ННГУ им. Лобачевского</p>
 						<p style={{ fontSize: "1.2rem" }}>Бакалавр информационных технологий</p>
 						<div className="link">
-							<a href="mailto:lartsov@gmail.com" target="_blank" rel="noopener noreferrer"
-								onClick={() => window.location.href = "mailto:lartsov@gmail.com"}>
+							<a href={`mailto:${LINK_MAIL}`} target="_blank" rel="noopener noreferrer"
+								onClick={() => window.location.href = `mailto:${LINK_MAIL}`}>
 								<div style={{ display: "inline-block" }}>
 									<div className="flex flex-row flex-align-center">
 										<div className="icon">
 											<MdAlternateEmail />
 										</div>
-										<p>lartsov@gmail.com</p>
+										<p>{LINK_MAIL}</p>
 									</div>
 								</div>
 							</a>
 						</div>
 						<div className="link">
-							<a href={`https://t.me/${TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
+							<a href={`https://t.me/${LINK_TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
 								<div style={{ display: "inline-block" }}>
 									<div className="flex flex-row flex-align-center">
 										<div className="icon">
 											<FaTelegram />
 										</div>
-										<p>@{TELEGRAM_NAME}</p>
+										<p>@{LINK_TELEGRAM_NAME}</p>
 									</div>
 								</div>
 							</a>
@@ -99,7 +108,7 @@ class MePage extends React.Component {
 							</a>
 						</div>
 						<div className="link">
-							<a href="https://nn.hh.ru/resume/ab956444ff01ae077c0039ed1f6d3531415864" target="_blank" rel="noopener noreferrer">
+							<a href={LINK_HH_RESUME} target="_blank" rel="noopener noreferrer">
 								<div style={{ display: "inline-block" }}>
 									<div className="flex flex-row flex-align-center">
 										<div className="icon">
@@ -305,6 +314,27 @@ class ArticlesPage extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/979406/" target="_blank" rel="noopener noreferrer">Изучаем транспорт для ShadowSocks/XRAY: от «голубиной почты» до туннеля по WebRTC</a></p>
+					<p>Увлекся компьютерными сетями, протоколами, и DPI - deep packet inspection. Ковыряя секьюрные протоколы вроде ShadowSocks и Xray/VLESS, возникла идея написать кастомный транспорт данных посредством технологии звонков WebRTC.</p>
+					<p>Для построения туннеля данных нужен какой-либо TURN-сервер для пересылки данных.</p>
+					<p>Таким образом туннель с данными маскируется под WebRTC-звонок.</p>
+					<p>Для меня это было очень увлекательное исследование с реверс-инжинирингом, впоследствии которого я решил поделиться полученным опытом в виде статьи.</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article5Photo} alt="" width="350" height="100%" />
+						</div>
+					</p>
+				</div>
+				<div className="big-block-vertical">
+					<p className="h"><a href="https://habr.com/ru/articles/982034/" target="_blank" rel="noopener noreferrer">Мультиплексирование потоков данных Node.js Streams: пошагово программируем и разбираем задачу</a></p>
+					<p>Учебная статья по реализации алгоритма мультиплексирования над потоками данных (Streams) в NodeJS. Сам всё время путался в их внутренних функциях, разобравшись, решил написать статью - тем самым, так же реализуя свой преподавательский интерес!</p>
+					<p>
+						<div className="flex flex-row flex-justify-center">
+							<img className="photo" src={Article6Photo} alt="" width="350" height="100%" />
+						</div>
+					</p>
+				</div>
 				<div className="big-block-vertical">
 					<p className="h"><a href="https://habr.com/ru/articles/311220/" target="_blank" rel="noopener noreferrer">Программирование&Музыка: понимаем и пишем VSTi синтезатор на C# WPF. Часть 1</a></p>
 					<p>Моё хобби - музыка, и когда я начал разбираться в музыкальной теории, физике звука, возник интерес к устройству синтезаторов звука. Причем, синтез звука может быть сделан как аналоговым (микросхемы с проводами) путем, так и программным - многочисленные программы для записи и создания музыки на компьютере.</p>
@@ -765,11 +795,11 @@ class Footer extends React.Component {
 					<p>Ivan Lartsov {new Date().getFullYear()}</p>
 					<div className="icons">
 						<div className="icon"
-							onClick={() => window.location.href = "mailto:lartsov@gmail.com"}>
+							onClick={() => window.location.href = `mailto:${LINK_MAIL}`}>
 							<MdAlternateEmail />
 						</div>
 						<div className="icon">
-							<a href={`https://t.me/${TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
+							<a href={`https://t.me/${LINK_TELEGRAM_NAME}`} target="_blank" rel="noopener noreferrer">
 								<FaTelegram />
 							</a>
 						</div>
@@ -779,13 +809,27 @@ class Footer extends React.Component {
 							</a>
 						</div>
 						<div className="icon">
-							<a href="https://nn.hh.ru/resume/ab956444ff01ae077c0039ed1f6d3531415864" target="_blank" rel="noopener noreferrer">
+							<a href={LINK_HH_RESUME} target="_blank" rel="noopener noreferrer">
 								<svg width="48" height="48" style={{ zoom: "0.38" }} version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M24 48c13.255 0 24-10.745 24-24S37.255 0 24 0 0 10.745 0 24s10.745 24 24 24" /><path d="M13.65 13.169v8.164c1.243-1.482 2.733-2.228 4.461-2.228.89 0 1.687.17 2.402.507.717.335 1.253.765 1.615 1.287.364.527.61 1.104.743 1.74.132.633.198 1.618.198 2.954v8.729h-3.862V26.46c0-1.56-.07-2.548-.217-2.968a1.917 1.917 0 00-.775-1c-.372-.251-.835-.375-1.394-.375-.64 0-1.214.16-1.713.478-.51.32-.876.798-1.108 1.437-.236.64-.354 1.585-.35 2.836l-.004 7.454H9.789V13.169h3.862m15.206 0v8.164c1.244-1.482 2.733-2.228 4.46-2.228.887 0 1.69.17 2.406.507.714.335 1.25.765 1.61 1.287a4.69 4.69 0 01.743 1.74c.133.633.199 1.618.199 2.954v8.729h-3.858V26.46c0-1.56-.073-2.548-.22-2.968a1.91 1.91 0 00-.777-1c-.368-.251-.835-.375-1.394-.375-.639 0-1.213.16-1.713.478-.503.32-.871.798-1.106 1.437-.232.64-.35 1.585-.35 2.836v7.454H25V13.169h3.857" fill="#FEFEFE" /></svg>
 							</a>
 						</div>
 					</div>
 				</div>
 			</div>
+		);
+	}
+}
+
+const DEBUG_PRINT_INFO = true;
+
+class DebugOverlay extends React.Component {
+	render() {
+		return (
+			DEBUG_PRINT_INFO && process.env.NODE_ENV === "development" ?
+				<div>
+					<p style={{ zIndex: 999, backgroundColor: "black", color: "white", position: "fixed", left: 0 }}>{window.screen.availWidth} x {window.screen.availHeight}</p>
+				</div>
+				: null
 		);
 	}
 }
@@ -801,7 +845,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				{/* {process.env.NODE_ENV === "development" && <p style={{ zIndex: 999, backgroundColor: "black", color: "white", position: "fixed", left: 0 }}>{window.screen.availWidth} x {window.screen.availHeight}</p>} */}
+				<DebugOverlay />
 				<Router>
 					<Header />
 					<Main />
