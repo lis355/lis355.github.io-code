@@ -53,7 +53,7 @@ function getDifferenceInYears(dateA, dateB) {
 const BIRTH_DATE = new Date(Date.parse("1993-03-10"));
 const LINK_MAIL = "lartsov@gmail.com";
 const LINK_TELEGRAM_NAME = "ivanlartsov";
-const LINK_HH_RESUME = "https://spb.hh.ru/resume/ab956444ff01ae077c0039ed1f6d3531415864";
+const LINK_HH_RESUME = "https://spb.hh.ru/resume/ec6aa41fff104a1cc20039ed1f6933467a4d68";
 
 class MePage extends React.Component {
 	render() {
@@ -237,22 +237,12 @@ class CareerPage extends React.Component {
 								</td>
 							</tr>
 							<tr>
-								<td className="v-a-top"><p className="h">2024</p></td>
+								<td className="v-a-top"><p className="h">2025</p></td>
 								<td className="v-a-top"><div className="line-box" /></td>
 								<td>
-									<p className="h">БК-Студия</p>
-									<p>Нижний Новгород <a href="https://bk-s.pro/" target="_blank" rel="noopener noreferrer">https://bk-s.pro/</a></p>
-									<p>Программист Unity3D</p>
-									<p>Программирование обучающих приложений-тренажеров</p>
-								</td>
-							</tr>
-							<tr>
-								<td className="v-a-top"><p className="h">2024</p></td>
-								<td className="v-a-top"><div className="line-box" /></td>
-								<td>
-									<p className="h">JDAM Corporation</p>
-									<p>Технический директор</p>
-									<p>NodeJS + Express + MongoDB / React + MobX + Electron / Chrome CDP</p>
+									<p className="h">Zeta Labs</p>
+									<p>Lead Go / Fullstack Developer</p>
+									<p>Go / NodeJS + Express + MongoDB / React + MobX + Electron / Chrome CDP</p>
 									<p>Разработка и поддержка автоматизации действия пользователя в браузере, система для парсинга и взаимодействия с сайтами, логгирования, программирование обслуживающего сервера с микросервисной архитектурой.</p>
 									<p>Разработка антидетект-стратегий для работы браузера в автоматическом режиме.</p>
 									<p>Поддержка рабочего состояния системы: сервер, админ-панель, программа, обновления, CI/CD</p>
